@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic styles for the chat button */
+        .chatbot-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #d50032;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 14px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .chatbot-btn:hover {
+            background-color: #bb0000;
+        }
+
+        /* Chatbot iframe container styles */
+        #chat-container {
+            display: none; /* Initially hidden */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 350px;
+            height: 500px;
+            background-color: #ffffff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            z-index: 999;
+            overflow: hidden;
+        }
+
+        #chat-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Style for the close button */
+        .close-btn {
+            background-color: transparent;
+            color: black;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+        }
+
+        .close-btn:hover {
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+<button style="position:fixed;bottom:20px;right:20px;background-color:#fbac1b;color:white;padding:12px 20px;border:none;border-radius:50px;cursor:pointer;font-size:14px;box-shadow:0 5px 15px rgba(0, 0, 0, 0.2);z-index:1000;" onclick="this.style.display='none';var chat=document.createElement('div');chat.innerHTML='<button style=\'background-color:transparent;color:black;border:none;font-size:24px;cursor:pointer;position:absolute;top:10px;right:15px;\' onclick=\'this.parentNode.remove();document.querySelector(&quot;button[style]&quot;).style.display=&quot;block&quot;\'>&times;</button><iframe src=\'http://127.0.0.1:5000\' style=\'width:100%;height:100%;border:none\'></iframe>';chat.style.cssText='position:fixed;bottom:20px;right:20px;width:350px;height:500px;background-color:#fff;box-shadow:0 8px 16px rgba(0, 0, 0, 0.2);border-radius:10px;z-index:999;overflow:hidden';document.body.appendChild(chat);">Chat with Us</button>
+
+</body>
+</html>

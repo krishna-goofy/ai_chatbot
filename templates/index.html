@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <header>
+            <h1>LegalAlly</h1>
+        </header>
+
+        <div class="chat-box" id="chat-box">
+            <div id="loading-container" class="hidden">
+                <div class="loading-animation"></div>
+                <p>Loading...</p>
+            </div>
+        </div>
+
+        <!-- Dynamic question bubbles -->
+        <div class="question-bubbles" id="question-bubbles">
+            <!-- Bubbles will be dynamically inserted here -->
+        </div>
+
+        <div class="input-container">
+            <textarea id="question-input" placeholder="Type your question here..."></textarea>
+            <button id="send-btn" class="primary-btn">Send</button>
+        </div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
